@@ -42,7 +42,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
 }
 
-## 🏃 How to Run Locally
+ 🏃 How to Run Locally
 Prerequisites
 Java 17 or higher
 
@@ -65,7 +65,7 @@ Generate JAR
 bash
 ./gradlew jar
 java -jar build/libs/CodeAlpha-Task3-1.0.0.jar
-## 🔄 CI/CD Pipeline Workflow
+ 🔄 CI/CD Pipeline Workflow
 The GitHub Actions pipeline automatically:
 
 ✅ Checkout - Pulls the latest code
@@ -119,7 +119,7 @@ Continuous Delivery	JAR artifact generated for deployment
 Version Control	Git with meaningful commits
 Testing	JUnit unit tests
 Dependency Management	Gradle with Maven Central
-## 🐛 Troubleshooting
+🐛 Troubleshooting
 Build Fails
 bash
 ./gradlew clean build
@@ -130,7 +130,7 @@ Permission Denied (Linux/Mac)
 bash
 chmod +x gradlew
 ./gradlew build
-## 📸 Screenshots
+📸 Screenshots
 ### Pipeline Success
 ![Pipeline Success](screenshots/pipeline-success.png)
 
