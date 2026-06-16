@@ -130,17 +130,15 @@ bash
 chmod +x gradlew
 ./gradlew build
 📸 Screenshots
-1. Pipeline Success
-https://screenshots/pipeline-success.png
+### Pipeline Success
+![Pipeline Success](screenshots/pipeline-success.png)
 
-2. Build Logs
-https://screenshots/build-logs.png
+### Build Logs
+![Build Logs](screenshots/build-logs.png)
 
-3. Test Results
-https://screenshots/test-results.png
+### Artifact Upload
+![Artifact Upload](screenshots/artifact-upload.png)
 
-4. Artifact Upload
-https://screenshots/artifact-upload.png
 
 👨‍💻 Author
 Sohana Akbar
