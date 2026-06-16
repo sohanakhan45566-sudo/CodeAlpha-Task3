@@ -3,15 +3,10 @@ name: Java CI with Gradle
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-
     steps:
     - uses: actions/checkout@v4
     
@@ -21,20 +16,19 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Make gradlew executable
+    - name: Fix line endings and permissions
       run: |
+        sudo apt-get update && sudo apt-get install -y dos2unix
+        dos2unix gradlew
         chmod +x gradlew
         ls -la gradlew
+        head -1 gradlew
 
-    - name: Build with Gradle
+    - name: Build and Test
       run: |
-        ./gradlew build
-        
-    - name: Run tests
-      run: |
-        ./gradlew test
+        ./gradlew build test
 
-    - name: Upload JAR artifact
+    - name: Upload JAR
       uses: actions/upload-artifact@v4
       with:
         name: app-jar
