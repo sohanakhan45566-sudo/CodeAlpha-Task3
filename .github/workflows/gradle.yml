@@ -16,9 +16,11 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
     
+    - name: Make gradlew executable
+      run: chmod +x gradlew
+    
     - name: Build and Test
-      run: |
-        java -jar gradle/wrapper/gradle-wrapper.jar build test
+      run: ./gradlew build test
     
     - name: Upload JAR
       uses: actions/upload-artifact@v4
